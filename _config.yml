@@ -1,72 +1,37 @@
-# Set theme
-remote_theme: daviddarnes/alembic@main
+title: Long Haul
+description: Long Form Jekyll theme built with SASS
 
-# File excludes
-exclude:
-- README.md
-- Gemfile
-- Gemfile.lock
+url: https://long-haul.netlify.app
+paginate_path: "blog/page:num/"
+permalink: blog/:title/
 
-# Set plugins
-plugins:
-- jekyll-sitemap
-- jekyll-mentions
-- jekyll-paginate
-- jekyll-seo-tag
-- jekyll-redirect-from
-- jekyll-feed
-- jekyll-commonmark
-- jekyll-include-cache
-- jemoji
-- jekyll-remote-theme
+# Header Option
+# header: large
 
-# Site settings
-url: 'https://mydomain.com'
-baseurl: ''
-title: 'My website'
-description: 'This is my new website'
-permalink: pretty
-logo: "https://www.gravatar.com/avatar/6c0377abcf4da91cdd35dea4554b2a4c?s=52"
+sass:
+    style: compressed
 
-# Pagination
+markdown: kramdown
+highlighter: rouge
+plugins: [jekyll-paginate]
 paginate: 5
-paginate_path: blog/page:num
 
-# Header nav
-navigation_header:
-- title: Home
-  url: /
-- title: About
-  url: /about/
-- title: Blog
-  url: /blog/
+navigation:
+    - title: Home
+      url: /index.html
+    - title: About
+      url: /about
+    - title: Contact
+      url: /contact
 
-# Footer nav
-navigation_footer:
-- title: Back to top
-  url: "#top"
+social:
+    github: brianmaierjr
+    twitter: brianmaierjr
+    facebook: brianmaierjr
+    email: brimaidesigns@gmail.com
+    linkedin: brianmaierjr
 
-# Collections
-collections:
-  posts:
-    title: Posts
-    output: true
-    description: "My thoughts and ideas"
-    feature_text: |
-      Welcome to my blog
-    feature_image: "https://picsum.photos/2560/600?image=866"
+google_analytics: "UA-58263416-1"
 
-# Collection settings
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: post # Set the default layout for posts
-  -
-    scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: page # Set the default layout for pages
+disqus:
+    shortname: brianmaierjr
